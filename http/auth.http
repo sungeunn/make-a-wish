@@ -1,0 +1,36 @@
+### 회원가입
+
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "name": "호돌맨",
+  "email": "hodolman88@gmail.com",
+  "password": "1234"
+}
+
+
+### 로그인
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "hodolman88@gmail.com",
+  "password": "1234"
+}
+
+
+### 사용자 페이지
+
+GET http://localhost:8080/user
+
+
+### 관리자 페이지
+
+GET http://localhost:8080/admin
+
+
+### 메인 페이지
+
+GET http://localhost:8080

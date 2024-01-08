@@ -1,0 +1,21 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:p6spy:h2:mem:makeawish;NON_KEYWORDS=USER
+    username: sa
+    password:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+  jpa:
+    defer-datasource-initialization: true
+  data:
+    web:
+      pageable:
+        max-page-size: 2000
+        default-page-size: 20
+        one-indexed-parameters: true
+logging:
+  level:
+    p6spy: INFO

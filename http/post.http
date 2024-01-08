@@ -1,0 +1,19 @@
+### 게시글 조회
+
+GET http://localhost:8080/api/posts
+Content-Type: application/json
+
+### 게시글 작성
+
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+
+{
+  "title": "제목입니다.",
+  "content": "내용입니다."
+}
+
+### 게시글 삭제
+
+DELETE http://localhost:8080/api/posts/3
+Content-Type: application/json
