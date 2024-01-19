@@ -4,7 +4,10 @@ import {fetchPosts} from "@/api/posts";
 export default {
   data() {
     return {
-      posts: [],
+      items: [{
+        name: 'moon',
+        src: '/image/moon/moon04.png'
+      }],
       currentDate: (new Date()).toLocaleDateString()
     }
   },
@@ -25,7 +28,9 @@ export default {
 </script>
 
 <template>
-  <img class="square square1" src="@/assets/image/moon.png"/>
+  <router-link to="/items/new">
+    <img alt="달" class="square square1" :src="items[0].src"/>
+  </router-link>
   <img class="square square2" src="@/assets/image/star.png"/>
   <img class="square square3" src="@/assets/image/star2.png"/>
   <img class="square square4" src="@/assets/image/fireworks.png"/>
@@ -40,6 +45,8 @@ export default {
   width: 20%;
   position: absolute;
   transform: translate(-50%, -50%);
+  image-rendering: pixelated;
+  opacity: 0.9;
   /*filter: opacity(1.0) drop-shadow(0 0 0 white);*/
 }
 

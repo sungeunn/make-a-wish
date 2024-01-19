@@ -24,7 +24,7 @@ const router = createRouter({
       path: '/items/new',
       name: 'item-new',
       component: ItemNewView,
-      beforeEnter
+      // beforeEnter
     },
     {
       path: "/login",

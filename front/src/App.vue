@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-container class="pt-0 ">
+      <v-container class="pa-0">
         <div class="container">
           <content/>
         </div>
