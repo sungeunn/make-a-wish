@@ -1,10 +1,13 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import HomeView from "@/views/HomeView.vue"
 import ReadView from "@/views/ReadView.vue"
 import LoginView from "@/views/LoginView.vue";
 import SignupView from "@/views/SignupView.vue";
 import ItemNewView from "@/views/ItemNewView.vue";
 import store from "@/store";
+import WishView from "@/views/WishView.vue";
+import WishPositionView from "@/views/WishPositionView.vue";
+import WishShapeView from "@/views/WishShapeView.vue";
+import WishNewView from "@/views/WishNewView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,7 +15,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: WishView
+    },
+    {
+      path: '/:username',
+      name: 'user-wish',
+      component: WishView,
+    },
+    {
+      path: '/:username/:position',
+      name: 'user-wish-position',
+      component: WishPositionView
+    },
+    {
+      path: '/:username/:position/:shape',
+      name: 'user-wish-shape',
+      component: WishShapeView,
+      props: true
+    },
+    {
+      path: '/:username/:position/:shape/:number',
+      component: WishNewView,
     },
     {
       path: '/posts/:postId',

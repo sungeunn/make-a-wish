@@ -1,13 +1,7 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-container class="pa-0">
-        <div class="container">
-          <content/>
-        </div>
-      </v-container>
-    </v-main>
-  </v-app>
+  <div class="container">
+    <content/>
+  </div>
 </template>
 
 <script>
@@ -30,15 +24,4 @@ body {
   sans-serif;
 }
 
-.container {
-  margin: 0 auto;
-  background-image: url("@/assets/image/container.png");
-  max-width: 300px;
-  height: 100vh;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center center;
-  //overflow: hidden;
-}
 </style>
